@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular 2 Starter</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
+    <script src="../node_modules/systemjs/dist/system.js"></script>
+    <script src="../node_modules/typescript/lib/typescript.js"></script>
+    <script src="../node_modules/rxjs/bundles/Rx.min.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: {'app': {defaultExtension: 'ts'}}
+        });
+        System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+<app>Loading...</app>
+</body>
+</html>
